@@ -1,0 +1,199 @@
+/* ————————————
+    CONFIG BASE
+———————————— */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ————————————
+    NAVBAR
+———————————— */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.navbar nav a {
+    margin-left: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: opacity .3s;
+}
+
+.navbar nav a:hover {
+    opacity: .5;
+}
+
+/* ————————————
+    HERO
+———————————— */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #222, #000);
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-sub {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.1rem;
+    opacity: .8;
+}
+
+.btn-primary {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    opacity: .6;
+}
+
+.btn-primary.big {
+    padding: 18px 50px;
+    font-size: 1.2rem;
+}
+
+/* ————————————
+    SESSÕES
+———————————— */
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+}
+
+.beneficios,
+.feedbacks,
+.cta-section {
+    padding: 120px 80px;
+}
+
+/* ————————————
+    BENEFÍCIOS
+———————————— */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #111;
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid #222;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #fff;
+}
+
+/* ————————————
+    FEEDBACKS
+———————————— */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.feedback-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid #222;
+    font-size: 1rem;
+    opacity: .9;
+}
+
+.feedback-card span {
+    display: block;
+    margin-top: 20px;
+    opacity: .7;
+}
+
+/* ————————————
+    CTA FINAL
+———————————— */
+.cta-section {
+    text-align: center;
+}
+
+.cta-section p {
+    margin-top: 10px;
+    opacity: .8;
+}
+
+/* ————————————
+    FOOTER
+———————————— */
+.footer {
+    padding: 40px;
+    text-align: center;
+    opacity: .6;
+}
+
+/* ————————————
+    ANIMAÇÕES
+———————————— */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
